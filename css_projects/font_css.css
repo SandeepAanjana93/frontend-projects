@@ -1,0 +1,22 @@
+p {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+* {
+    font-family: 'Times New Roman';
+}
+
+#outer {
+    font-size: 25px;
+}
+
+#inner {
+    font-size: 10px;
+}
+h2{
+    text-decoration: underline;
+}
+h2{
+    font-weight: bold, italic, oblique, normal, small-caps, inherit, initial, unset;
+}

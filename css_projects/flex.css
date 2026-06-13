@@ -1,0 +1,28 @@
+div{
+    display: flex;
+    border: 5px solid black;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+ul{
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.f{
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgb(54, 54, 28);
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.s{
+    width: 100px;
+    height: 100px;
+    
+    
+   
+}

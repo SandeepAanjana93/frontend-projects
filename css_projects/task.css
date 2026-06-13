@@ -1,0 +1,11 @@
+.head{
+    height:50px;
+    width: 900;
+    background-color: rgb(255, 85, 0);
+    display: flex;
+}
+.nav{
+    height: auto;
+    width: auto;
+    border: 1px black;
+}

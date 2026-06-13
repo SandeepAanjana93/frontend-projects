@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form — ATS College Ujjain</title>
+    <meta name="description" content="Fill out the admission form to apply at Anjana Institute of Technology and Science College, Ujjain. Courses: BCA, MCA, BTech, MTech, MBA, BCom, BSc, BPharma, LLB.">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="apply">
+    <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.png" alt="ATS Logo" width="85" class="me-2">
+                <span class="fw-bold">ATS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="course.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faculty.html">Faculty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="facility.html">Facilities</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Engineering</a></li>
+                            <li><a class="dropdown-item" href="#">Managment</a></li>
+                            <li><a class="dropdown-item" href="#">Pharmacy</a></li>
+                            <li><a class="dropdown-item" href="#">Science</a></li>
+                            <li><a class="dropdown-item" href="#">business</a></li>
+                            <li><a class="dropdown-item" href="#">Law</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="fw-bold">
+                    Admission Form
+                </h1>
+                <p>
+                    Fill out the form below to apply for admission.
+                </p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="admission_card">
+                        <form action="#" method="POST">
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">
+                                    Full Name
+                                </label>
+                                <input type="text" class="form-control" id="fullName" name="full_name" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    Email Address
+                                </label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="mobile" class="form-label">
+                                    Mobile Number
+                                </label>
+                                <input type="tel" class="form-control" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="course" class="form-label">
+                                    Select Course
+                                </label>
+                                <select class="form-select" id="course" name="course" required>
+                                    <option value="" disabled selected>-- Select Course --</option>
+                                    <option value="BCA">BCA</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="BTech">BTech</option>
+                                    <option value="MTech">MTech</option>
+                                    <option value="MBA">MBA</option>
+                                    <option value="BCom">BCom</option>
+                                    <option value="BSc">BSc</option>
+                                    <option value="BPharma">BPharma</option>
+                                    <option value="LLB">LLB</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="address" class="form-label">
+                                    Address
+                                </label>
+                                <textarea class="form-control" id="address" name="address" rows="4" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn submit_btn text-white w-100">
+                                Submit Application
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="images/logo.png" alt="ATS College Logo" class="footer-logo">
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="course.html">Courses</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Contact</h5>
+                    <p>📞 +91 9876543210</p>
+                    <p>✉ info@atscollege.edu.in</p>
+                    <p>📍 Ujjain, MP</p>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Follow Us</h5>
+                    <a href="#" class="d-block mb-2">Facebook</a>
+                    <a href="#" class="d-block mb-2">Instagram</a>
+                    <a href="#" class="d-block mb-2">LinkedIn</a>
+                    <a href="#" class="d-block mb-2">YouTube</a>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                © 2026 ATS College. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

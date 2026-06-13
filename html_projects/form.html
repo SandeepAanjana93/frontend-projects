@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <!-- text box -->
+        <label for="fname"> first name</label><br>
+        <input type="text" id="fname" name="fname">
+        <br>
+        <label for="lname"> last name</label><br>
+        <input type="text" id="lname" name="lname">
+        <br>
+        <!-- password -->
+        <label for="password"> password</label><br>
+        <input type="password" id="password" name="password">
+        <br>
+        <!-- email -->
+        <label for="email"> email</label><br>
+        <input type="email" id="email" name="email">
+        <br>
+        <!-- number -->
+        <label for="number"> number</label><br>
+        <input type="number" id="number" name="number">
+        <br>
+        <!-- date -->
+        <label for="date"> date</label><br>
+        <input type="date" id="date" name="date">
+        <br>
+        <!-- time -->
+        <label for="time"> time</label><br>
+        <input type="time" id="time" name="time">
+        <br>
+        <!-- datetime -->
+        <label for="datetime"> datetime</label><br>
+        <input type="datetime" id="datetime" name="datetime">
+        <br>
+        <!-- datetime-local -->
+        <label for="datetime-local"> datetime-local</label><br>
+        <input type="datetime-local" id="datetime-local" name="datetime-local">
+        <br>
+        <!-- week -->
+        <label for="week"> week</label><br>
+        <input type="week" id="week" name="week">
+        <br>
+        <!-- month -->
+        <label for="month"> month</label><br>
+        <input type="month" id="month" name="month">
+        <br>
+        <!-- range -->
+        <label for="range"> range</label><br>
+        <input type="range" id="range" name="range">
+        <br>
+        <!-- color -->
+        <label for="color"> color</label><br>
+        <input type="color" id="color" name="color">
+        <br>
+        <!-- search -->
+        <label for="search"> search</label><br>
+        <input type="search" id="search" name="search">
+        <br>
+        <!-- url -->
+        <label for="url"> url</label><br>
+        <input type="url" id="url" name="url">
+        <br>
+        <!-- tel -->
+        <label for="tel"> tel</label><br>
+        <input type="tel" id="tel" name="tel">
+        <br>       
+    </form>
+    <form>
+        <!-- radio  -->
+        <input type="radio" name="gender" value="male"> male
+        <input type="radio" name="gender" value="female"> female
+        <input type="radio" name="gender" value="other">other
+        <br>
+        <br>
+        <!-- checkbox -->
+        <input type="checkbox" id="maths" name="maths">maths
+        <input type="checkbox" id="physics" name="physics">physics
+        <input type="checkbox" id="chemistry" name="chemistry">chemistry
+        <br>
+        
+    </form>
+    <!-- target  -->
+    <form target="_blank"></form>
+    <form target="_self"></form>
+    <form target="_parent"></form>
+    <form target="_top"></form>
+    <form target="framename"></form>
+    <form autocomplete="off"></form> <!--autocomplete-->
+    <form novalidate></form> <!--novalidate-->
+    <form>
+        <!-- select  -->
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
+        <!-- text area -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        <!-- field set -->
+        <fieldset>
+            <legend>Personalia:</legend>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname">
+            <br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname">
+            <br>
+            <input type="image" src="submit.png" alt="Submit">
+        </fieldset>
+        <!-- data list  -->
+        <label for="browser">Choose your favorite browser from a list:</label>
+        <input list="browsers" name="browser" id="browser">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Safari">
+            <option value="Firefox">
+            <option value="Edge">
+        </datalist>
+        
+    </form>
+</body>
+</html>

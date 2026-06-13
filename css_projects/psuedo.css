@@ -1,0 +1,21 @@
+button{
+  background-color: blue;
+  color: white;
+}
+button:hover{
+  background-color: red;
+}
+li:nth-child(odd){
+  background-color: yellow;
+}
+p::first-line{
+  color: rgb(49, 19, 182);
+  font-family: 'monospace';
+}
+p::first-letter{
+    font-size: 200%;
+    color: rgb(46, 8, 160);
+}
+p{
+    color: rgb(48, 97, 140);
+}

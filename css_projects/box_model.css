@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+   
+}
+.nav{
+   
+    /* width: 100px; */
+    /* height: 100px; */
+    color: red;
+ 
+    /* padding-right: 20px; */
+    margin-right: 200px;
+    font-weight: bolder;
+}
+div
+{
+    width: 100%;
+    height: auto;
+    background-color: rgb(42, 9, 113);
+    padding: 10px;
+}
+.logo{
+    margin-top: 20px;
+}
+input{
+    border-radius: 10px;
+    /* text-align: center; */
+    padding-left:10px;
+    width: 200px;
+    height: 30px;
+    margin-right: 10px;
+}
+.b{
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+    margin-left: 10px;
+    padding-left: 10px;
+}

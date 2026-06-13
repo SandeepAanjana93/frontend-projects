@@ -1,0 +1,32 @@
+div{
+    width: 200px;
+    height: 100px;
+    background-color: blueviolet;
+    color: bisque;
+    
+}
+div:hover{
+    width: 400px;
+    height: 100px;
+    background-color: brown;
+    color: black;
+    transition: all ease-in 3s; 
+    /* font: 900; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* transform: rotate(270deg); */
+    /* transform: scale(0.7); */
+    /* transform: scaleX(2); */
+    /* transform: scaleY(3); */
+    /* transform: translateY(300px); */
+    /* transform: translateY(-300px); */
+    /* transform: translate(-300px); */
+    /* transform: translate(300px); */
+    /* transform: skew(30deg); */
+}
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

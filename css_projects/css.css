@@ -1,0 +1,82 @@
+body{
+    background-color: whitesmoke;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.head{
+    background-color: #2f1c60;
+    height: 50px;
+    padding: 10px;
+    position: sticky;
+    top:0px;
+    z-index: 100;
+    border-bottom: 3px solid black;  
+}
+.port{
+    text-align: center;
+    color: beige;
+    font-size: 30px;  
+}
+.main{
+    width: 300px;
+    height: 550px;
+    background-color:#ddd;
+    border: 2px solid rgb(220, 213, 199);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+
+}
+.photo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto 15px auto;
+    display: block;
+    border: 3px solid rgb(108, 133, 142);  
+}
+.photo:hover{
+    transform:rotate(360deg);
+    transition: all 0.3s ease;
+}
+.name{
+    text-align: center;
+    color: #2f1c60;
+    margin-bottom: 10px;
+}
+.about{
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+}
+.stats{
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+}
+.p{
+    text-align: center;
+    color: rgb(69, 28, 176);
+    margin-bottom: 10px;
+    background-color: rgb(167, 216, 200);
+    width: 70%;
+    height: 30px;
+    border-radius: 20px;
+}
+.foot{
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+    background-color: rgb(167, 216, 200);
+    width: 130px;
+    height: 30px;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 10px;
+    right: 500px;
+    padding-top: 15px;
+}
+.foot:hover{
+    background-color: #132e86;
+}
