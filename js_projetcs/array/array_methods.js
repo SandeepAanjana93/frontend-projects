@@ -89,5 +89,64 @@ console.log(show)
 // (11) findIndex----(The output will be given in index)--------------------
 
 let found2 = table.findIndex(num => num < 7);
-console.log(found2)
+console.log(found2);
+console.log("----------------------------------------------------");
 
+// (12) concat----(Merges two or more arrays)--------------------
+
+let con_arr = [2,5,6,73,65,45]
+let con_arr2 = [5,3,8,6,9,7,9,10]
+merge_arr = con_arr.concat(con_arr2)
+console.log(merge_arr)
+
+// (13) forEach----(operation are performed but output is not return)--------------------
+
+let list = [2,3,5,7,8,45,34,6,87,12,34,23,42]
+list.forEach(num => (num * 3))
+list.forEach(num => (num <= 13))
+console.log(list)
+list.forEach(num => console.log(num * 3))
+
+// (14) map----(return a list after perfomed operations)--------------------
+
+let list2 = [2, 3, 5, 7, 8, 45, 34, 6, 87, 12, 34, 23, 42]
+let num = list2.map(num => (num * 3))
+console.log(num)
+let num2 = list2.map(num => (num <= 13))
+console.log(num2)
+
+// (15) filter----(it can take action but performed operations)--------------------
+
+let list3 = [2, 3, 5, 7, 8, 45, 34, 6, 87, 12, 34, 23, 42]
+let num3 = list3.filter(num => (num * 3))
+console.log(num3)
+let num4 = list3.filter(num => (num <= 13))
+console.log(num4)
+
+// (16) reduce----(Reduces an array to a single value )--------------------
+
+let list4 = [2, 3, 5, 7, 8, 45, 34, 6, 87, 12, 34, 23, 42]
+let num5 = list4.reduce((acc,list4) => acc + list4,0)
+console.log(num5)
+let num6 = list4.reduce((acc,list4) => acc - list4, 0)
+console.log(num6)
+
+// (17) sort----(arrange the items in assending order base on first latter)--------------------
+
+let list5 = [2, 3, 5, 7, 8, 45, 34, 6, 87, 12, 34, 23, 42]
+let num7 = list5.sort();
+console.log(num7)
+
+let fruits = ["banana","graps","apple","mango","orange","pinapple"]
+let num8 = fruits.sort();
+console.log(num8)
+
+// (17) reverse----(reverse array)--------------------
+
+let list6 = [2, 3, 5, 7, 8, 45, 34, 6, 87, 12, 34, 23, 42]
+let num9 = list6.reverse();
+console.log(num9)
+
+let fruits2 = ["banana", "graps", "apple", "mango", "orange", "pinapple"]
+let num10 = fruits2.reverse();
+console.log(num10)
