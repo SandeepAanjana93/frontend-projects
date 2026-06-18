@@ -80,7 +80,7 @@ console.log(table.includes(15))
 let found = table.find(num => num > 7)
 console.log(found)
 
-let chack = table.find(num => num = 12)
+let chack = table.find(num => num == 12)
 console.log(chack)
 
 let show = table.find(num => num <= 18)
