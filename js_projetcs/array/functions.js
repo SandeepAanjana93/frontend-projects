@@ -1,4 +1,4 @@
-// normal function
+//function decleration
 
 function hello(){
     console.log("hello coder, i am sandeep patel")
@@ -85,3 +85,111 @@ let count = () => {
 }
 
 count(arr)
+
+console.log("----------------------------------------------")
+// Parameters vs Arguments----------------------------------
+
+
+// Parameters – Variables in the function definition.
+
+// Arguments – Actual values passed when calling the function.
+
+function welcome(user) {  // user is a parameter
+    console.log("Welcome " + user);
+}
+
+welcome("Priya");  // "Priya" is an argument
+
+// -----------------------------------------------------
+
+
+// Return Statement
+// If you want to send a value back from the function, use return.
+
+
+// -------------------------------------------------------------
+
+console.log("----------------------------------------------")
+
+// Callback Functions(Function inside Function)
+// A callback function is passed as an argument to another function, and is called after some operation is completed.
+
+function showMessage(name, callback) {
+    console.log("Hello " + name);
+    callback();
+}
+
+function sayBye() {
+    console.log("Goodbye!");
+}
+
+showMessage("Sonia", sayBye);
+console.log("----------------------------------------------")
+
+
+// Anonymous Functions
+// 📘                   What is an Anonymous Function ?
+//                       An anonymous function is a function without a name.
+
+
+let say = function () {
+    console.log("Hello!");
+};
+
+say();
+console.log("----------------------------------------------")
+
+setTimeout(function () {
+    console.log("This message appears after 2 seconds.");
+}, 2000);
+console.log("----------------------------------------------")
+
+const numbers = [1, 2, 3];
+
+const squares = numbers.map(function (num) {
+    return num * num;
+});
+
+console.log(squares);
+console.log("----------------------------------------------")
+
+// IIFE(Immediately Invoked Function Expression)
+
+(function () {
+    console.log("This runs immediately!");
+})();
+console.log("----------------------------------------------")
+
+const counter = (function () {
+    let count = 0;
+    return function () {
+        count++;
+        return count;
+    };
+})();
+
+console.log(counter()); 
+console.log(counter()); 
+
+console.log("----------------------------------------------")
+
+// Higher - Order Functions(HOF)
+
+function greetUser(name, callback) {
+    console.log("Hello", name);
+    callback();
+}
+
+greetUser("Payal", function () {
+    console.log("Hope you're doing well!");
+});
+
+
+function multiplier(factor) {
+    return function (num) {
+        return num * factor;
+    };
+}
+
+const double = multiplier(2);
+console.log(double(5)); 
