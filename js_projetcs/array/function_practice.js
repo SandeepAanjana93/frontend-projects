@@ -57,3 +57,12 @@ let discount = applyDiscount(total);
 showFinalMessage(total, discount, function (finalAmount) {
     console.log(`You need to pay ₹${finalAmount}`);
 });
+
+
+console.log("---------------------------------------------------------")
+
+let sum = function(a,b){
+    return a + b
+}
+sum(10,5)
+
