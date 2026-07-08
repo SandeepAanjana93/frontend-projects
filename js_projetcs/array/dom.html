@@ -1,0 +1,47 @@
+<!-- -----------DOM(DOCUMENT OBJECT MODEL)------------------ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+      <div id="first">id demo</div>
+      <div class="ft">class demo</div>
+      <div class="ft">class demo</div>
+      <div class="ft">class demo</div>
+      <div class="ft">class demo</div>
+      <div class="ft">class demo</div>
+      <div class="ft">class demo</div>
+      <div class="fit">demo</div>
+      <div class="fit">demo</div>
+      <div class="fit">demo</div>
+      <div class="fit">demo</div>
+      <div class="fit">demo</div>
+      <div class="fit">demo</div>
+      <script>
+// (1) getElementById --- this method always returns a single element.------
+
+let element = document.getElementById("first").innerText = "This is a demo of id DOM";
+console.log(element);
+
+// (2) getElementsByClassName --- this method returns a collection of elements.------
+        let element2 = document.getElementsByClassName("ft");
+        console.log(element2);
+
+    // (3) getElementsByTagName --- this method returns a collection of elements.------
+        let element3 = document.getElementsByTagName("div");
+        console.log(element3);
+
+        // (4) document.querySelector() This method selects the first element that matches a given CSS selector.
+        let element4 = document.querySelector(".ft").style.color = "red";
+        let element5 = document.querySelector(".ft")
+        console.log(element5);
+        // (5) document.querySelectorAll() This method selects all elements that match a given CSS selector.
+        let element6 = document.querySelectorAll(".fit");
+        let element7 = document.querySelectorAll(".fit").forEach((element) => {
+            element.style.color = "blue";
+        });
+        console.log(element6);
+      </script>
+    </body>
+</html>
