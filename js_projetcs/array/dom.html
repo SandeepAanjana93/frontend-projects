@@ -1,34 +1,44 @@
 <!-- -----------DOM(DOCUMENT OBJECT MODEL)------------------ -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>DOM</title>
-    </head>
-    <body>
-      <div id="first">id demo</div>
-      <div class="ft">class demo</div>
-      <div class="ft">class demo</div>
-      <div class="ft">class demo</div>
-      <div class="ft">class demo</div>
-      <div class="ft">class demo</div>
-      <div class="ft">class demo</div>
-      <div class="fit">demo</div>
-      <div class="fit">demo</div>
-      <div class="fit">demo</div>
-      <div class="fit">demo</div>
-      <div class="fit">demo</div>
-      <div class="fit">demo</div>
-      <script>
-// (1) getElementById --- this method always returns a single element.------
 
-let element = document.getElementById("first").innerText = "This is a demo of id DOM";
-console.log(element);
+<head>
+    <title>DOM</title>
+</head>
 
-// (2) getElementsByClassName --- this method returns a collection of elements.------
+<body>
+    <div id="first">id demo</div>
+    <div class="ft">class demo</div>
+    <div class="ft">class demo</div>
+    <div class="ft">class demo</div>
+    <div class="ft">class demo</div>
+    <div class="ft">class demo</div>
+    <div class="ft">class demo</div>
+    <div class="fit">demo</div>
+    <div class="fit">demo</div>
+    <div class="fit">demo</div>
+    <div class="fit">demo</div>
+    <div class="fit">demo</div>
+    <div class="fit">demo</div>
+    <p id="para">hello world</p>
+    <p id="para2">hello world</p>
+    <div id="div">hello world</div>
+    <button id="colorButton" onclick="changeColor()">Change Background</button>
+
+    <script>
+
+        // Accessing DOM elements using different methods:--------------------------
+
+        // (1) getElementById() --- this method always returns a single element.------
+
+        let element = document.getElementById("first").innerText = "This is a demo of id DOM";
+        console.log(element);
+
+        // (2) getElementsByClassName() --- this method returns a collection of elements.------
         let element2 = document.getElementsByClassName("ft");
         console.log(element2);
 
-    // (3) getElementsByTagName --- this method returns a collection of elements.------
+        // (3) getElementsByTagName() --- this method returns a collection of elements.------
         let element3 = document.getElementsByTagName("div");
         console.log(element3);
 
@@ -42,6 +52,50 @@ console.log(element);
             element.style.color = "blue";
         });
         console.log(element6);
-      </script>
-    </body>
+
+        // Modifying DOM Elements -----------------------------------------
+
+        // (1) innerText(): This property allows you to get or set the text content of an element.
+        //     It represents the visible text within the element, excluding any HTML tags.
+
+        let peragraph = document.getElementById("para").innerText;
+        console.log(peragraph);
+        // (3) textContent(): This property allows you to get or set the text content of an element
+
+        let peragraph2 = document.getElementById("para2").textContent;
+        console.log(peragraph2);
+
+        // (2) innerHTML(): This property allows you to get or set the HTML content of an element.
+
+        let div = document.getElementById("div");
+        console.log(div.innerHTML = "<p id='hello'>hello coder</p>");
+        let div2 = document.getElementById("hello");
+        console.log(div2.outerHTML)
+
+        // modifying attribute of an element:-----------------------------
+
+
+        // (1) getAttribute(): This method allows you to retrieve the value of a specified attribute from an element.
+
+        let div4 = document.getElementById("div");
+        let attributeValue = div4.getAttribute("class");
+        console.log(attributeValue);
+
+        // (2) setAttribute(): This method allows you to set the value of an attribute for a specified element.
+
+        let div3 = document.getElementById("div");
+        div3.setAttribute("class", "my-class");
+        console.log(div3);
+        // let dom = document.getElementByClassName("my-class");
+        // console.log(dom.outerHTML);
+
+    // (3) style property: This property allows you to modify the inline styles of an element.
+
+        function changeColor() {
+            document.body.style.backgroundColor = "lightblue";
+        }
+
+    </script>
+</body>
+
 </html>
