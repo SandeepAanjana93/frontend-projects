@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="txt">hello world</h1>
+    <p id="para">hello coder</p>
+    <img src="images.jpg" alt="Sample Image" height="200" width="200"><br>
+    <button id="btn">click</button><br>
+    <button id="bttn">click</button><br>
+    <button id="butn">click</button>
+    <ul>
+        <li class="frt">mango</li>
+        <li class="frt">banana</li>
+        <li class="frt">orange</li>
+        <li class="frt">apple</li>
+    </ul>
+    <button id="btnclr">click here</button>
+
+    <input type="text" id="textInput" placeholder="Type something...">
+    <p id="output"></p>
+    <script>
+        let text = document.getElementById("btn").addEventListener("click", function(event){
+            document.getElementById("txt").innerText = "welcome to javascript";
+        })
+        let btn = document.getElementById("butn").addEventListener("dblclick", function(event){
+            document.getElementById("para").style.color = "red";
+        })
+        let bttn = document.getElementById("bttn").addEventListener("click", function(event){
+            document.querySelector("img").style.border = "2px solid red";
+        })
+        let bttnn = document.getElementById("btnclr").addEventListener("click", function(event){
+            let fruits = document.getElementsByClassName("frt");
+            for(let i=0; i<fruits.length; i++){
+                fruits[i].style.color = "blue";
+            }
+        })
+
+        let box = document.getElementById("textInput").addEventListener("keyup", function(event){
+            document.getElementById("output").innerText = event.target.value;
+        })
+    </script>
+</body>
+</html>
