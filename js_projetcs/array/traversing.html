@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1 id="heading">JavaScript</h1>
+        <p>DOM Practice</p>
+        <button>Click Me</button>
+    </div>
+    <ul id="list">
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Banana</li>
+    </ul>
+    <script>
+        let parent = document.getElementById("heading")
+        console.log(parent.parentNode)
+        console.log(parent.parentElement)
+
+        let child = document.getElementById("list");
+        console.log(child.childNodes);
+        console.log(child.children);
+        console.log(child.children[0]);
+        console.log(child.children[child.children.length - 1]);
+        console.log(child.children.length);
+        console.log(child.childNodes.length);
+        for(let i = 0; i<child.children.length;i++){
+            console.log(child.children[i])
+            console.log(child.children[i].innerText)
+        }
+    </script>
+</body>
+</html>
