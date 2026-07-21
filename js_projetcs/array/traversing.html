@@ -16,6 +16,13 @@
         <li>Mango</li>
         <li>Banana</li>
     </ul>
+    <div id="box">
+        <p id="one">Student 1</p>
+        <p class="list" id="two">Student 2</p>
+        <p id="three">Student 3</p>
+        <p id="four">Student 4</p>
+        <p id="five">Student 5</p>
+    </div>
     <script>
         let parent = document.getElementById("heading")
         console.log(parent.parentNode)
@@ -32,6 +39,16 @@
             console.log(child.children[i])
             console.log(child.children[i].innerText)
         }
+        let box = document.getElementById("one")
+        let box2 = document.getElementById("five")
+        let box3 = document.getElementById("three")
+        console.log(box.nextElementSibling)
+        console.log(box2.previousElementSibling)
+        console.log(box.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling)
+        console.log(box2.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling)
+        box3.nextElementSibling.innerText = "present"
+        console.log(box3.previousElementSibling.className)
+
     </script>
 </body>
 </html>
