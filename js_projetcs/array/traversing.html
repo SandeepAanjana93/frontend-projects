@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div id="container">
         <h1 id="heading">JavaScript</h1>
@@ -23,10 +25,19 @@
         <p id="four">Student 4</p>
         <p id="five">Student 5</p>
     </div>
+    <div id="box2">
+        <p>Student 2</p>
+        <p>Student 3</p>
+    </div>
+    
     <script>
+        // parentnode and parentelement ----------------------------------
+
         let parent = document.getElementById("heading")
         console.log(parent.parentNode)
         console.log(parent.parentElement)
+
+        // childnodes and children ---------------------------------------
 
         let child = document.getElementById("list");
         console.log(child.childNodes);
@@ -35,10 +46,13 @@
         console.log(child.children[child.children.length - 1]);
         console.log(child.children.length);
         console.log(child.childNodes.length);
-        for(let i = 0; i<child.children.length;i++){
+        for (let i = 0; i < child.children.length; i++) {
             console.log(child.children[i])
             console.log(child.children[i].innerText)
         }
+
+        // nextelementsibling and previouselementsibling ------------------
+
         let box = document.getElementById("one")
         let box2 = document.getElementById("five")
         let box3 = document.getElementById("three")
@@ -48,6 +62,34 @@
         console.log(box2.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling)
         box3.nextElementSibling.innerText = "present"
         console.log(box3.previousElementSibling.className)
+
+        // create and remove  element ---------------------------------
+
+        let tag = document.createElement("p")
+        tag.innerText = "JavaScript";
+        document.body.appendChild(tag)
+        let one = document.createElement("h1")
+        one.innerText = "sandeep patel";
+        document.getElementById("container").appendChild(one)
+
+        let btn = document.createElement("button")
+        btn.innerText = "click me"
+        btn.setAttribute("id","btn")
+        document.body.appendChild(btn)
+
+        let newdiv = document.createElement("div")
+        let newh = document.createElement("h4")
+        let newp = document.createElement("p")
+        newh.innerText = "sandeep patel"
+        newp.innerText = "java scripts"
+        document.body.appendChild(newdiv)
+        newdiv.appendChild(newh)
+        newdiv.appendChild(newp)
+        
+        let newpara = document.createElement("p")
+        newpara.innerText = "student 1"
+        let parant = document.getElementById("box2")
+        parant.insertBefore(newpara , parant.children[0])
 
     </script>
 </body>
