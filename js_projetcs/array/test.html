@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container1">
+        <p id="old">Old Paragraph</p>
+    </div>
+    <button id="change_text">change text</button>
+    <script>
+        let oldPara = document.getElementById("old");
+        oldPara.style.color = "darkblue"
+        let btn = document.getElementById("change_text")
+        btn.style.bagbroundColor = ""
+        document.getElementById("change_text").addEventListener("click", function () {
+            let oldPara = document.getElementById("old");
+            let newPara = document.createElement("p");
+            if (oldPara.innerText === "Old Paragraph"){
+                newPara.innerText = "New Paragraph"
+                newPara.style.color = "red"
+            }
+            else {
+                newPara.innerText = "Old Paragraph"
+                newPara.style.color = "lightblue"
+                document.getElementById("change_text").style.bagbroundColor = "red"
+            }
+            newPara.id = "old";
+            document.getElementById("container1").replaceChild(newPara, oldPara);
+        });
+    </script>
+</body>
+
+</html>

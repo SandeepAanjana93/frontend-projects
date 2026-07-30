@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Hello World</h1>
+    <p class="item">Apple</p>
+    <p class="item">Banana</p>
+    <p class="item">Mango</p>
+    <div>First Div</div><br>
+    <div>Second Div</div><br>
+    <div>Third Div</div><br>
+    <h2 class="heading">JavaScript</h2>
+    <h2 class="heading">Python</h2>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>React</li>
+    <button id="btn">Click Me</button>
+    <p class="text">Hello</p>
+    <p class="text">World</p>
+    
+    <script>
+        document.getElementById("title").innerText = "welcome to dom";
+        function changecolor(){
+            let fruits = document.getElementsByClassName("item");
+            for(let i = 0; i < fruits.length; i++){
+                fruits[i].style.color = "red";
+            }
+        }
+        function changebgcolor(){
+            let divs = document.getElementsByTagName("div");
+            for(let i = 0; i < divs.length; i++){
+                divs[i].style.backgroundColor = "yellow";
+            }
+        }
+        let head = document.querySelector(".heading").innerText = "frontend development";
+        function changelicolor(){
+            let list = document.querySelectorAll("li");
+            for(let i = 0; i < list.length; i++){
+                list[i].style.color = "blue";
+            }
+        }
+        function changbtncolor(){
+            let btn = document.querySelector("text");
+            for(let i = 0; i < btn.length; i++){
+                btn[i].style.color = "green";
+            }
+            
+        }
+        changelicolor()
+        changecolor()
+        changebgcolor()
+    </script>
+</body>
+</html>

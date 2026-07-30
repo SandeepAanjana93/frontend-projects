@@ -115,13 +115,14 @@ console.log(num)
 let num2 = list2.map(num => (num <= 13))
 console.log(num2)
 
-// (15) filter----(it can take action but performed operations)--------------------
+// (15) filter----(it can take action but not performed operations)--------------------
 
 let list3 = [2, 3, 5, 7, 8, 45, 34, 6, 87, 12, 34, 23, 42]
 let num3 = list3.filter(num => (num * 3))
 console.log(num3)
 let num4 = list3.filter(num => (num <= 13))
 console.log(num4)
+console.log("-----------------------------------------------")
 
 // (16) reduce----(Reduces an array to a single value )--------------------
 

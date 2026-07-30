@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li>apple</li>
+        <li>banana</li>
+        <li>mango</li>
+        <li>orange</li>
+        <li>grapes</li>
+    </ul>
+    <div id="container">
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+        <button>Button 4</button>
+    </div>
+    <div id="menu">
+        <button data-id="101">Apple</button>
+        <button data-id="102">Banana</button>
+        <button data-id="103">Mango</button>
+    </div>
+    <div id="todo">
+        <div>
+            <button class="delete">Delete</button>
+        </div>
+    </div>
+    <div id="study">
+        <div class="item">Learn JavaScript</div>
+        <div class="item">Learn DOM</div>
+        <div class="item">Learn Event Delegation</div>
+    </div>
+    <div id="users">
+        <div class="user">
+            <span>Sandeep</span>
+            <button class="delete">Delete</button>
+        </div>
+
+        <div class="user">
+            <span>Rahul</span>
+            <button class="delete">Delete</button>
+        </div>
+
+        <div class="user">
+            <span>Amit</span>
+            <button class="delete">Delete</button>
+        </div>
+    </div>
+    <div id="products">
+        <button class="buy">Buy iPhone</button>
+        <button class="buy">Buy Laptop</button>
+        <button class="buy">Buy Tablet</button>
+    </div>
+    <p>Total Clicks: <span id="count">0</span></p>
+
+    <div id="box1">HTML</div>
+    <div id="box2">CSS</div>
+    <div id="box3">JavaScript</div>
+    <ul id="list2">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+        <li>Orange</li>
+    </ul>
+    <div id="menu2">
+        <button class="active3">Home</button>
+        <button>About</button>
+        <button>Contact</button>
+        <button>Services</button>
+    </div>
+    <div id="cards">
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">JavaScript</div>
+        <div class="card">React</div>
+    </div>
+    <div id="faq">
+        <div class="question">What is HTML?</div>
+        <div class="answer">HTML is a markup language.</div>
+    
+        <div class="question">What is CSS?</div>
+        <div class="answer">CSS is used for styling.</div>
+    
+        <div class="question">What is JavaScript?</div>
+        <div class="answer">JavaScript is a programming language.</div>
+    </div>
+
+    <script>
+        // -----------------Event Delegation---------------
+
+        document.getElementById("list").addEventListener("click", function (event) {
+            if (event.target.tagName === "LI") {
+                console.log("you clicked: " + event.target.innerText);
+            }
+        });
+        document.getElementById("container").addEventListener("click", function (event) {
+            if (event.target.tagName === "BUTTON") {
+                console.log("clicked: " + event.target.innerText);
+            }
+        });
+        document.getElementById("menu").addEventListener("click", function (event) {
+            if (event.target.tagName === "BUTTON") {
+                console.log("product: " + event.target.innerText + ", " + "id: " + event.target.dataset.id);
+            }
+        });
+        document.getElementById("todo").addEventListener("click", function (event) {
+            event.target.parentElement.remove()
+            let div = document.createElement("div")
+            let btn = document.createElement("button")
+            btn.innerText = "delete"
+            btn.setAttribute("class", "delete")
+            div.appendChild(btn)
+            this.appendChild(div)
+        });
+        document.getElementById("study").addEventListener("click", function (event) {
+            event.target.classList.toggle("completed")
+        })
+        document.getElementById("users").addEventListener("click", function (event) {
+            console.log("deleted user: " + event.target.previousElementSibling.innerText)
+            event.target.parentElement.remove()
+        })
+
+        let count = 0;
+        document.getElementById("products").addEventListener("click", function (event) {
+            if (event.target.classList.contains("buy")) {
+                count++;
+                document.getElementById("count").innerText = count;
+                console.log("You bought: " + event.target.innerText);
+            }
+        });
+        document.getElementById("box2").addEventListener("click", function (event) {
+            document.getElementById("box1").classList.add("active")
+            document.getElementById("box2").classList.add("active")
+            document.getElementById("box3").classList.add("active")
+        })
+        document.getElementById("list2").addEventListener("click", function (event) {
+            if (event.target.tagName === "LI") {
+                event.target.classList.add("selected")
+            }
+        })
+        document.getElementById("menu2").addEventListener("click", function (event) {
+            let act = document.getElementById("menu2").children
+            for (i = 0; i < act.length; i++) {
+                if (act[i].classList.contains("active3")) {
+                    act[i].classList.remove("active3")
+                }
+            }
+            if (event.target.tagName === "BUTTON") {
+                event.target.classList.add("active3")
+            }
+        })
+        document.getElementById("cards").addEventListener("click",function(event){
+            if(event.target.tagName === "DIV"){
+                event.target.classList.toggle("selected")
+            }
+        })
+        document.getElementById("faq").addEventListener("click",function(event){
+            if(event.target.tagName === "DIV"){
+                event.target.nextElementSibling.classList.toggle("show")
+            }
+        })
+    </script>
+
+</body>
+
+</html>

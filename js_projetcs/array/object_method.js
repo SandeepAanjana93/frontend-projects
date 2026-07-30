@@ -1,5 +1,3 @@
-// Adding, Updating, and Deleting Properties--------------------
-
 // (1) Object.assign(target, source)-------------------
 
 let object = {name:"sandeep",age:22}

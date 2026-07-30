@@ -1,0 +1,44 @@
+<!-- Create an attendance dashboard with a heading, a list of students and a button. Each
+student has either 'Present' or 'Absent'. On button click: Count Present students. Count
+Absent students. Update the heading to display both counts. Use:
+getElementsByClassName(), innerText/textContent, onclick, loops, if-else -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="heading">Attendance Dashboard</div>
+    <ul>
+        <li class="student" id="pre">Student 1 - Present</li>
+        <li class="student" id="abs">Student 2 - Absent</li>
+        <li class="student" id="pre">Student 3 - Present</li>
+        <li class="student" id="abs">Student 4 - Absent</li>
+        <li class="student" id="pre">Student 5 - Present</li>
+        <li class="student" id="pre">Student 6 - Present</li>
+        <li class="student" id="abs">Student 7 - Absent</li>
+        <li class="student" id="pre">Student 8 - Present</li>
+        <li class="student" id="abs">Student 9 - Absent</li>
+        <li class="student" id="pre">Student 10 - Present</li>
+    </ul>
+    <button id = "pre" onclick="countStudents()">check attendance</button>
+    <script>
+        function countStudents(){
+            let students = document.getElementsByClassName("student");
+            let presentCount = 0;
+            let absentCount = 0;
+            for(let i = 0; i < students.length; i++){
+                if(students[i].id === "pre"){
+                    presentCount++;
+                } else if(students[i].id === "abs"){
+                    absentCount++;
+                }
+            }
+            document.getElementById("heading").innerText = `Present: ${presentCount}, Absent: ${absentCount}`;
+        }
+
+    </script>
+</body>
+</html>

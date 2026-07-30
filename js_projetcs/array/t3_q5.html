@@ -1,0 +1,42 @@
+<!-- Create a course dropdown (JavaScript, React, Node). Whenever the selected course
+changes: Display the appropriate batch message. Use a different text color for each
+course. Example: JavaScript → 'JavaScript Batch Starts Monday' React → 'React Batch
+Starts Friday' Node → 'Node Batch Starts Sunday' Use: getElementById(), onchange,
+innerText, style, if-else -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <select id="course" onchange="selectcourse()">
+    <option id="">select course</option>
+    <option id="java">javascript</option>
+    <option id="react">react</option>
+    <option id="nodejs">nodejs</option>
+</select>
+<p id="info"></p>
+   <script>
+    function selectcourse(){
+        let select = document.getElementById("course");
+        if(select.value == "javascript"){
+            document.getElementById("info").innerText = "JavaScript Batch Starts Monday";
+            document.getElementById("info").style.color = "red";
+        }
+        else if(select.value == "react"){
+            document.getElementById("info").innerText = "React Batch Friday";
+            document.getElementById("info").style.color = "blue";
+        }
+        else if(select.value == "nodejs"){
+            document.getElementById("info").innerText = "Node Batch Starts Sunday";
+            document.getElementById("info").style.color = "pink";
+        }
+        else{
+            document.getElementById("info").innerText = "";
+        }
+}
+   </script>
+</body>
+</html>

@@ -61,8 +61,38 @@ showFinalMessage(total, discount, function (finalAmount) {
 
 console.log("---------------------------------------------------------")
 
-let sum = function(a,b){
+let sum = function (a,b) {
     return a + b
 }
-sum(10,5)
+console.log(sum(10, 5))
 
+console.log("---------------------------------------------------------")
+let checknumber = function(a){
+    if(a % 2 == 0){
+        return "number is even"
+    }
+    else{
+        return "number is odd"
+    }
+}
+
+console.log(checknumber(8))
+console.log(checknumber(7))
+
+console.log("---------------------------------------------------------")
+
+
+// (function(){
+//     let count1 = 10;
+// })();
+
+// console.log(count1)
+
+console.log("---------------------------------------------------------");
+
+    (function () {
+        let a = 100;
+        console.log(a);
+    })();
+
+console.log(a);

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* ---------q1------------- */
+        .highlight{ background-color:yellow; color:red; font-weight:bold; }
+        /* ---------q2-------------  */
+        .online{ color:green; font-weight:bold; }
+        /* ---------q3-------------  */
+        .dark{ background:black; color:white;} 
+    </style>
+    <!-- ---------q1------------- -->
+    <p id="message">Welcome to JavaScript</p>
+    <button id="btn">Highlight Text</button>
+    <!-- ---------q2------------- -->
+    <p id="status" class="online">User is Online</p>
+    <button id="btn2">Set Offline</button>
+    <!-- ---------q3------------- -->
+    <button id="modeBtn">Toggle Dark Mode</button>
+    <!-- ---------q4------------- -->
+    <p id="para" class="active">Learning JavaScript</p>
+    <button id="checkBtn">Check Status</button>
+    <!-- ---------q5------------- -->
+    <div id="box">Box</div>
+    <button id="btn3">Change Box</button>
+    <script>
+        // --------- q1------------- 
+        document.getElementById("btn").addEventListener("click", function(event){
+            document.getElementById("message").classList.add("highlight")
+        })
+        // --------- q2------------- 
+        document.getElementById("btn2").addEventListener("click", function(event){
+            document.getElementById("status").classList.remove("online")
+        })
+        // --------- q3------------- 
+        document.getElementById("modeBtn").addEventListener("click", function(event){
+            document.querySelectorAll("body").classList.toggle("dark")
+        })
+        // --------- q4------------- 
+        document.getElementById("checkBtn").addEventListener("click", function(event){
+            para = document.getElementById("para")
+            if(para.classList.contains("active")){
+                alert("active user")
+            }
+        })
+        // --------- q5------------- 
+        document.getElementById("btn3").addEventListener("click",function(event){
+            let para = document.getElementById("box")
+            if(para.classList.contains("red")){
+            }
+            else{
+                para.classList.add("red")
+            }
+            para.classList.toggle("round")
+            if(para.classList.contains("red")){
+                para.classList.add("shadow")
+            }
+        })
+
+
+    </script>
+</body>
+</html> 

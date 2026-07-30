@@ -1,0 +1,26 @@
+<!-- An employee card contains an image and a 'Verify Employee' button. On button click:
+Print the old image source using getAttribute(). Replace it with verified.png using
+setAttribute(). Add a green border around the image. Use: getAttribute(), setAttribute(),
+style, onclick. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images.jpg" id="emp" alt="employee image" width="300px" height="200px">
+    <br>
+    <button onclick="verifyEmployee()">Verify Employee</button>
+    <script>
+        function verifyEmployee() {
+            let oldimg = document.getElementById("emp");
+            let image = oldimg.getAttribute("src");
+            console.log(image);
+            oldimg.setAttribute("src", "images.jpg");
+            oldimg.style.border = "2px solid green";
+        }
+    </script>
+</body>
+</html>

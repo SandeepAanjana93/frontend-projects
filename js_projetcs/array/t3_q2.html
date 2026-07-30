@@ -1,0 +1,36 @@
+<!-- Display multiple product prices and an 'Apply Offer' button. On button click: Find
+products whose price is greater than ₹1000. Change their text color to green. Show '
+20% OFF' below those products using innerHTML. Use: querySelectorAll(), innerHTML,
+style, loops, operators. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <p class="product">ear buds : 600</p>
+        <p class="product">smart watch : 1600</p>
+        <p class="product">mobile cover : 350</p>
+        <p class="product">external hard drive : 2000</p>
+        <p class="product">headphones : 500</p>
+        <p class="product">old mobile : 3000</p>
+        <p class="offer"></p>
+        <p class="offer"></p>
+        <p class="offer"></p>
+    <button id="apply" onclick="applyoffer()">Apply Offer</button>
+    <script>
+        function applyoffer(){
+            let list = document.querySelectorAll(".product");
+            for(let i = 0; i<list.length; i++){
+                let price = Number(list[i].innerText.split(":")[1]);
+                if(price > 1000){
+                    list[i].style.color = "green";
+                    list[i].innerHTML += "<br>20% OFF";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

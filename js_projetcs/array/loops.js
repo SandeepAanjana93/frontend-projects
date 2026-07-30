@@ -139,7 +139,6 @@ console.log("--------------------------------------------------------------")
 
 // do while loop-----------------------------
 
-let password;
 do {
     password = prompt("Enter your password:");
 } while (password !== "secure123");
