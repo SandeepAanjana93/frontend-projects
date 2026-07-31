@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <input type="text" id="name" placeholder="Enter your name">
+    <button id="save">Save</button>
+    <input type="text" id="name2">
+    <button id="save2">Save</button>
+    <button id="show">Show</button>
+
+    <p id="result"></p>
+
+    <input type="text" id="name3">
+    <button id="save3">Save</button>
+    <button id="delete">Delete</button>
+    <button id="show2">Show</button>
+
+    <p id="result2"></p>
+    <button id="save4">Save</button>
+    <button id="show3">show</button>
+    <ul id="list"></ul>
+
+    <input type="text" id="task">
+    <button id="add">Add</button>
+
+    <ul id="list2"></ul>
+    <script>
+        document.getElementById("save").addEventListener("click", function (event) {
+            let name = document.getElementById("name")
+            localStorage.setItem("username", name.value)
+        })
+        document.getElementById("save2").addEventListener("click", function (event) {
+            let name = document.getElementById("name2")
+            localStorage.setItem("user", name.value)
+        })
+        document.getElementById("show").addEventListener("click", function (event) {
+            let item = localStorage.getItem("user")
+            document.getElementById("result").innerText = item
+        })
+        document.getElementById("save3").addEventListener("click", function (event) {
+            let name = document.getElementById("name3")
+            localStorage.setItem("name", name.value)
+        })
+        document.getElementById("delete").addEventListener("click", function (event) {
+            localStorage.removeItem("name")
+        })
+        document.getElementById("show2").addEventListener("click", function (event) {
+            let item = localStorage.getItem("name")
+            if (item) {
+                document.getElementById("result2").innerText = item
+            }
+            else {
+                document.getElementById("result2").innerText = "No data found"
+            }
+        })
+        document.getElementById("save4").addEventListener("click", function (event) {
+            let arr = ["HTML", "CSS", "JavaScript"]
+            localStorage.setItem("courses", JSON.stringify(arr))
+        })
+        document.getElementById("show3").addEventListener("click", function (event) {
+            let show = document.getElementById("list")
+            let get = localStorage.getItem("courses")
+            let newget = JSON.parse(get)
+            show.innerHTML = ""
+            for (i = 0; i < newget.length; i++) {
+                let li = document.createElement("li")
+                li.innerText = newget[i]
+                document.getElementById("list").appendChild(li)
+            }
+        })
+        document.getElementById("add").addEventListener("click", function (event) {
+            
+        })
+
+    </script>
 </body>
+
 </html>
